@@ -40,6 +40,8 @@ It won't resize when Safari toolbars show/hide (less "jumping").
 
 @supports (height: 100dvh) {
   .app2 {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     height: 100dvh;
   }
 }
