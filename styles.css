@@ -31,19 +31,9 @@ Best UX (no jank): use 100svh as a stable viewport height.
 It won't resize when Safari toolbars show/hide (less "jumping").
 */
 .app {
-  height: 100svh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-}
-
-/* Uncomment to compare dynamic behavior (can reintroduce "resize jank") */
-
-@supports (height: 100dvh) {
-  .app2 {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100dvh;
-  }
+  height: 100dvh;
 }
 
 .top {
