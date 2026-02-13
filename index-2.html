@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Safe Area Test</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app2">
+      <header class="top">
+        <div class="top__title">Header</div>
+        <div class="top__meta">iOS Safari test: scroll content, watch toolbar</div>
+      </header>
+
+      <main class="content" aria-label="Scrollable content">
+        <p>
+          <strong>Goal:</strong> bottom bar is always visible, but not <code>position: fixed</code>.
+        </p>
+        <p>
+          Scroll down. The bottom bar should stay visually stable because only the content area
+          scrolls.
+        </p>
+
+        <div class="card">
+          <div class="card__title">Some content</div>
+          <div class="card__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a neque ut nunc
+            condimentum cursus.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__title">More content</div>
+          <div class="card__text">
+            Add enough blocks to create long scrolling content. This is where Safari usually causes
+            "fixed footer jump".
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="card">
+          <div class="card__title">Bottom reach</div>
+          <div class="card__text">
+            If you can reach here and the bottom bar never “jumps”, the hypothesis works.
+          </div>
+        </div>
+      </main>
+
+      <footer class="bottom" aria-label="Bottom actions">
+        <div class="bottom__row">
+          <button class="btn btn--ghost" type="button">Secondary</button>
+          <button class="btn btn--primary" type="button">Primary action</button>
+        </div>
+        <div class="bottom__hint">
+          No <code>position: fixed</code>. Safe area via <code>env()</code>.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
